@@ -60,8 +60,15 @@ function displayLessons() {
                     ? Math.round(completed / total * 100)
                     : 0;
 
-                progressText.textContent =
-                    `${completed} of ${total} activities completed (${percentage}%)`;
+               if (total > 0 && completed === total) {
+                    progressText.textContent = "Module Completed! (100%)";
+                    progressFill.style.backgroundColor = "#22c55e";
+                } else {
+                    progressText.textContent =
+                        `${completed} of ${total} activities completed (${percentage}%)`;
+
+                    progressFill.style.backgroundColor = "#38bdf8";
+                }
 
                 progressFill.style.width = `${percentage}%`;
             }

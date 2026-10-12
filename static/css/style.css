@@ -310,3 +310,26 @@ footer {
     padding-left: 25px;
 }
 
+
+/* 20. Lesson Structure Preview */
+.module-card {
+    background-color: #0f172a;
+    border: 1px solid #334155;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 15px;
+}
+
+.module-card h4 {
+    color: #38bdf8;
+    margin-top: 0;
+}
+
+.module-card ul {
+    padding-left: 25px;
+}
+
+.module-card li {
+    color: #cbd5e1;
+    margin-bottom: 10px;
+}

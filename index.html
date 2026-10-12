@@ -43,11 +43,26 @@
         </p>
 
         <h3>Learning Progress</h3>
-        <p>0 of 12 phases completed</p>
 
-        <div class="progress-bar">
-            <div class="progress-fill"></div>
+        <p id="dashboard-progress">
+            Loading learning progress...
+        </p>
+
+        <div class="progress-bar"
+            role="progressbar"
+            aria-label="Tracked learning activities"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+            id="dashboard-progressbar">
+
+            <div class="progress-fill"
+                id="dashboard-progress-fill"></div>
         </div>
+
+        <p id="dashboard-module-status">
+            Loading module status...
+        </p>
     </section>
 
     <!-- Dashboard Features -->
@@ -100,6 +115,9 @@
     <footer>
         <p>Localised AI Model for General Use</p>
     </footer>
+<script src="static/js/progress.js" defer></script>
+<script src="static/js/lesson-data.js" defer></script>
+<script src="static/js/dashboard.js" defer></script>
 
 </body>
 </html>

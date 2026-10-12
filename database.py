@@ -56,6 +56,18 @@ def initialize_database():
             )
         """)
 
+        # Register our first known lesson.
+        connection.execute("""
+            INSERT OR IGNORE INTO lessons
+                (lesson_id, title, lesson_type)
+            VALUES (?, ?, ?)
+        """, (
+            "p1-m1-l1",
+            "What is a Large Language Model?",
+            "lesson"
+        ))
+
+
     print(f"Database initialized: {DATABASE_PATH}")
 
 

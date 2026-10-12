@@ -1,22 +1,24 @@
 
-from flask import Flask, send_from_directory
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
 @app.route("/")
-def home():
-    return send_from_directory(app.root_path, "index.html")
-
-
 @app.route("/index.html")
-def home_file():
-    return send_from_directory(app.root_path, "index.html")
+def home():
+    return render_template(
+        "index.html",
+        active_page="home"
+    )
 
 
 @app.route("/roadmap.html")
 def roadmap():
-    return send_from_directory(app.root_path, "roadmap.html")
+    return render_template(
+        "roadmap.html",
+        active_page="roadmap"
+    )
 
 
 @app.route("/health")

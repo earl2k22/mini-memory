@@ -1,37 +1,9 @@
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+{% extends "base.html" %}
 
-    <title>Mini Memory Dashboard</title>
-    <link rel="stylesheet" href="static/css/style.css">
-</head>
+{% block title %}Dashboard | Mini Memory{% endblock %}
 
-<body>
-    
-    <header>
-        <h1>Mini Memory</h1>
-        <p>Localised AI Model for General Use</p>
-        <p>My Personal Dashboard of my Journey</p>
-    </header>
-
-    <!-- Main Navigation -->
-    <nav class="navbar" aria-label="Main navigation">
-        <a href="index.html"
-           class="nav-link active"
-           aria-current="page">
-            Dashboard
-        </a>
-    
-        <a href="roadmap.html" class="nav-link">
-            Learning Roadmap
-        </a>
-    </nav>
-    
-    <main>
+{% block content %}
 
     <!-- Welcome Section -->
     <section class="welcome-section">
@@ -110,14 +82,11 @@
         </div>
     </section>
 
-</main>
+{% endblock %}
 
-    <footer>
-        <p>Localised AI Model for General Use</p>
-    </footer>
-<script src="static/js/progress.js" defer></script>
-<script src="static/js/lesson-data.js" defer></script>
-<script src="static/js/dashboard.js" defer></script>
-
-</body>
-</html>
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/lesson-data.js') }}"
+        defer></script>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"
+        defer></script>
+{% endblock %}

@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Mini Memory{% endblock %}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Mini Memory</h1>
+        <p>Localised AI Model for General Use</p>
+        <p>My Personal AI Development Journey</p>
+    </header>
+
+    <nav class="navbar" aria-label="Main navigation">
+
+        <a href="{{ url_for('home') }}"
+           class="nav-link {% if active_page == 'home' %}active{% endif %}"
+           {% if active_page == 'home' %}aria-current="page"{% endif %}>
+            Dashboard
+        </a>
+
+        <a href="{{ url_for('roadmap') }}"
+           class="nav-link {% if active_page == 'roadmap' %}active{% endif %}"
+           {% if active_page == 'roadmap' %}aria-current="page"{% endif %}>
+            Learning Roadmap
+        </a>
+
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Mini Memory | Localised AI Model for General Use</p>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+
+</body>
+</html>

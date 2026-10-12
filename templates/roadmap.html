@@ -1,39 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
+{% block title %}Learning Roadmap | Mini Memory{% endblock %}
 
-    <title>Learning Roadmap | Mini Memory</title>
-
-    <link rel="stylesheet" href="static/css/style.css">
-</head>
-
-<body>
-
-    <header>
-        <h1>Mini Memory</h1>
-        <p>My Local AI Learning Journey</p>
-    </header>
-
-    <!-- Main Navigation -->
-    <nav class="navbar" aria-label="Main navigation">
-
-        <a href="index.html" class="nav-link">
-            Dashboard
-        </a>
-
-        <a href="roadmap.html"
-           class="nav-link active"
-           aria-current="page">
-            Learning Roadmap
-        </a>
-
-    </nav>
-
-    <main>
+{% block content %}
 
         <section class="welcome-section">
             <h2>AI Learning Roadmap</h2>
@@ -147,17 +116,17 @@
             <div id="lesson-container"></div>
         </section>
 
-    </main>
+{% endblock %}
 
-    <footer>
-        <p>Mini Memory | Localised AI Model</p>
-    </footer>
-<script src="static/js/progress.js" defer></script>
-<script src="static/js/roadmap-data.js" defer></script>
-<script src="static/js/roadmap.js" defer></script>
-
-<script src="static/js/lesson-data.js" defer></script>
-<script src="static/js/lessons.js" defer></script>
-
-</body>
-</html>
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/progress.js') }}"
+        defer></script>
+<script src="{{ url_for('static', filename='js/roadmap-data.js') }}"
+        defer></script>
+<script src="{{ url_for('static', filename='js/roadmap.js') }}"
+        defer></script>
+<script src="{{ url_for('static', filename='js/lesson-data.js') }}"
+        defer></script>
+<script src="{{ url_for('static', filename='js/lessons.js') }}"
+        defer></script>
+{% endblock %}

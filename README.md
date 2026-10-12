@@ -169,15 +169,15 @@ Legend:
 - [x] Task — Create app.py
 - [x] Task — Implement homepage and roadmap routes
 - [x] Task — Implement /health endpoint
-- [ ] Verify Flask runs locally
-- [ ] Verify requirements.txt is committed
-- [ ] Verify .gitignore is committed
+- [x] Verify Flask runs locally
+- [x] Verify requirements.txt is committed
+- [x] Verify .gitignore is committed
 
 ### Module 2: Flask Templates
-- [ ] Lesson 3.2 — Flask Templates and Routing
-- [ ] Task — Create templates directory
-- [ ] Task — Convert HTML pages into Flask templates
-- [ ] Task — Introduce reusable page components
+- [x] Lesson 3.2 — Flask Templates and Routing
+- [x] Task — Create templates directory
+- [x] Task — Convert HTML pages into Flask templates
+- [x] Task — Introduce reusable page components
 
 ### Module 3: Database Fundamentals
 - [ ] Lesson 3.3 — Introduction to SQLite

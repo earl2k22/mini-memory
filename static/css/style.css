@@ -76,3 +76,59 @@ footer {
         padding: 18px;
     }
 }
+
+/* 9. Welcome section */
+.welcome-section {
+    background-color: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.progress-bar {
+    background-color: #334155;
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    background-color: #38bdf8;
+    width: 0%;
+    height: 100%;
+}
+
+/* 10. Dashboard grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* 11. Dashboard cards */
+.dashboard-card {
+    background-color: #0f172a;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+}
+
+.dashboard-card h3 {
+    color: #38bdf8;
+    margin-top: 0;
+}
+
+.dashboard-card p {
+    color: #cbd5e1;
+}
+
+/* 12. Mobile responsiveness */
+@media (max-width: 600px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-section,
+    .dashboard-card {
+        padding: 18px;
+    }
+}

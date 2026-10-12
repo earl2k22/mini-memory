@@ -1,583 +1,408 @@
 
 # Mini Memory
-### Localised AI Model for General Use
+### A Local AI for Webnovel Polishing and Refinement
 
-A personal, self-hosted learning management platform and
-AI assistant developed step by step as a software
-engineering learning project.
+Mini Memory is my personal software engineering and artificial
+intelligence learning project.
 
-**Developer:** earl2k22
-**Repository:** https://github.com/earl2k22/mini-memory
-**Status:** Active Development
-**Current Stage:** Stage 3 — Python Backend
-**Current Lesson:** 3.1 completed/review pending
-**Next Lesson:** 3.2 — Flask Templates and Routing
+My goal is to **learn programming and AI development by
+building my own locally hosted AI assistant that can polish,
+refine, and improve webnovel chapters**.
+
+I want to understand how the entire application works,
+write the code myself, troubleshoot problems, and gradually
+become capable of independently developing and maintaining
+my own AI system.
+
+The learning dashboard, progress tracker, Flask backend,
+and SQLite database are supporting components of this goal.
+
+> **Project Philosophy:** Build it. Understand it.
+> Test it. Improve it.
 
 ---
 
-# 1. Project Overview
+## Project Information
 
-Mini Memory is a personal project designed to teach
-software development while building a practical
-self-hosted AI system.
+| Information | Details |
+|---|---|
+| Project | Mini Memory |
+| Developer | earl2k22 |
+| Repository | [mini-memory](https://github.com/earl2k22/mini-memory) |
+| Status | Active Development |
+| Current Stage | Stage 3 — Python Backend and Database |
+| Current Checkpoint | Lesson 3.4 — Flask API Fundamentals |
+| Next Lesson | Lesson 3.5 — JavaScript Fetch API |
+| Primary Goal | Local AI for Webnovel Polishing |
 
-The developer writes, tests, troubleshoots, and commits
-the code with assistance from an AI programming mentor.
+**Progress Note:** Lesson 3.4 API code is present in the
+repository. Local testing and persistence verification
+must be completed before proceeding.
 
-The project has two interconnected learning tracks:
+---
 
-1. Website Development — Building Mini Memory itself.
-2. Local AI Learning — Understanding, running, and
-   customizing local language models.
+## 1. What Is Mini Memory?
 
-The website will eventually become the interface used
-to study the AI curriculum and interact with the AI.
+Mini Memory is a self-hosted application that I am
+developing to learn software engineering and build
+a practical local AI system.
 
-## Primary Goals
+The project has two connected objectives:
 
-- Build a responsive learning dashboard.
-- Track phases, modules, lessons, labs, and checkpoints.
-- Save progress persistently using a database.
-- Develop a webnovel polishing application.
-- Run language models locally using Ollama.
-- Access the self-hosted website using a phone.
-- Operate without cloud AI or public internet when
-  the phone and PC share a local network.
-- Expand into a general-purpose personal AI assistant.
+### Learning Software Development
 
-## Guiding Principle
+Learn how to build modern applications using:
 
-Understand the code, implement it, test it, and commit it.
+- HTML, CSS, and JavaScript
+- Python and Flask
+- SQLite databases
+- HTTP and REST APIs
+- Git and GitHub
+- Local AI models and inference
+- Application architecture and debugging
 
-The AI acts as a mentor and code reviewer.
+### Building a Local Webnovel Polishing AI
+
+Develop an AI-powered application capable of:
+
+- Correcting grammar and awkward phrasing.
+- Improving sentence structure and readability.
+- Refining translated webnovel prose.
+- Preserving the original plot and narrative meaning.
+- Maintaining character names and terminology.
+- Avoiding invented content and accidental omissions.
+- Handling long chapters while preserving continuity.
+- Comparing original and refined text.
+- Exporting polished chapters.
+- Operating locally on my personal computer.
+
+**The webnovel polishing AI is the core product.**
+The learning management features exist to support
+my development journey.
+
+---
+
+## 2. Project Goals
+
+### Primary Goals
+
+1. Learn programming by personally building Mini Memory.
+2. Create a capable local AI webnovel polishing assistant.
+3. Run the AI model on my own Windows PC.
+4. Build a reliable web-based refinement interface.
+5. Preserve story meaning, tone, and important details.
+6. Process long webnovel chapters effectively.
+7. Develop character and terminology memory.
+8. Access the application from authorized devices,
+   including my phone.
+
+### Long-Term Goals
+
+After the webnovel polishing application is functional:
+
+- Improve model performance and efficiency.
+- Explore retrieval-augmented generation (RAG).
+- Investigate optional local model customization.
+- Improve deployment, privacy, and security.
+- Expand Mini Memory into a general-purpose AI assistant.
+
+---
+
+## 3. Technology Stack
+
+| Category | Technologies |
+|---|---|
+| Frontend | HTML5, CSS3, JavaScript |
+| Backend | Python, Flask |
+| Templates | Jinja |
+| Database | SQLite |
+| API | HTTP, JSON, REST |
+| AI Runtime | Ollama (planned) |
+| AI Models | Local LLMs (to be evaluated) |
+| Version Control | Git and GitHub |
+| Development | Visual Studio Code |
+| Operating System | Windows |
+
+The AI model has not yet been selected or integrated.
+
+---
+
+## 4. Documentation
+
+Detailed project information is organized inside
+the [`docs/`](docs/) directory.
+
+### Development and Learning
+
+| Document | Description |
+|---|---|
+| [Development Roadmap](docs/DEVELOPMENT_ROADMAP.md) | Programming stages, modules, lessons, practical tasks, and checkpoints |
+| [AI Learning Roadmap](docs/AI_LEARNING_ROADMAP.md) | Established 12-phase local AI learning curriculum |
+| [Development Guide](docs/DEVELOPMENT_GUIDE.md) | Environment setup, commands, testing, Git workflow, and coding conventions |
+
+### Project and Technical Documentation
+
+| Document | Description |
+|---|---|
+| [Webnovel AI](docs/WEBNOVEL_AI.md) | Core product vision, polishing rules, requirements, and milestones |
+| [Architecture](docs/ARCHITECTURE.md) | Technology stack, project structure, Flask routes, database, and APIs |
+
+### Continuity and AI Mentorship
+
+| Document | Description |
+|---|---|
+| [AI Context](docs/AI_CONTEXT.md) | AI recovery prompt, teaching instructions, and project rules |
+| [Session Log](docs/SESSION_LOG.md) | Latest checkpoint, completed work, unresolved issues, and next lesson |
+
+**Note:** These documentation links will become active
+as the corresponding Markdown files are created.
+
+---
+
+## 5. Current Development Progress
+
+### Stage 1 — Website Foundations
+
+**Completed**
+
+Git, GitHub, HTML, CSS, dashboard design,
+and website navigation.
+
+### Stage 2 — JavaScript and Progress Tracking
+
+**Completed**
+
+JavaScript fundamentals, localStorage, dynamic
+roadmap generation, nested lesson data, completion
+tracking, and dashboard progress calculations.
+
+### Stage 3 — Python Backend and Database
+
+**In Progress**
+
+Completed implementations include:
+
+- Python Flask application.
+- Jinja templates and shared layouts.
+- SQLite database initialization.
+- Lessons and lesson progress tables.
+- GET lesson progress API.
+- PUT lesson progress API.
+- JSON request validation.
+
+Remaining work includes:
+
+- Verifying Lesson 3.4 API tests.
+- Connecting JavaScript to Flask.
+- Migrating browser progress to SQLite.
+- Registering the full lesson catalog.
+- Implementing secure access from other devices.
+
+For detailed progress, see
+[Development Roadmap](docs/DEVELOPMENT_ROADMAP.md).
+
+---
+
+## 6. Project Architecture
+
+Mini Memory currently uses a browser frontend
+connected to a Python Flask application.
+
+The intended architecture is:
+
+    Browser (PC / Phone)
+             |
+             | HTTP / JSON
+             |
+        Flask Backend
+             |
+        +----+----+
+        |         |
+      SQLite   Local AI
+      Database   Model
+                  |
+                Ollama
+
+**Current state:**
+
+The Flask and SQLite foundations exist, but the
+browser still tracks progress through localStorage.
+The local AI integration has not yet been implemented.
+
+For the full architecture, see
+[Architecture](docs/ARCHITECTURE.md).
+
+---
+
+## 7. Running Mini Memory Locally
+
+### Requirements
+
+- Windows PC
+- Python
+- Flask
+- Git
+- Visual Studio Code
+
+### Open the Project
+
+    cd "E:\Code Projects\mini-memory"
+
+### Activate the Virtual Environment
+
+    .\.venv\Scripts\Activate.ps1
+
+### Install Dependencies
+
+If requirements.txt is available:
+
+    python -m pip install -r requirements.txt
+
+Otherwise, install Flask in the activated environment:
+
+    python -m pip install Flask
+
+### Initialize the Database
+
+    python database.py
+
+### Start Flask
+
+    python app.py
+
+### Open the Application
+
+Dashboard:
+
+    http://127.0.0.1:5000
+
+Health Check:
+
+    http://127.0.0.1:5000/health
+
+**Security Notice:** Flask's debug server is for
+local development only and must not be exposed
+directly to the public internet.
+
+For complete setup instructions, see
+[Development Guide](docs/DEVELOPMENT_GUIDE.md).
+
+---
+
+## 8. Development Methodology
+
+Mini Memory follows a structured learning approach:
+
+    Phase
+      |
+      Module
+        |
+        Lesson
+          |
+          Practical Lab
+            |
+            Checkpoint
+              |
+              Git Commit
+
+Each lesson should include:
+
+1. Learning objectives.
+2. Concept explanations.
+3. Code examples.
+4. Hands-on implementation.
+5. Testing and troubleshooting.
+6. A practical challenge.
+7. A completion checkpoint.
+8. Appropriate Git commands.
+
+The developer should understand the code rather
+than simply copy it.
+
+The AI mentor assists with explanations,
+architecture, debugging, and code review.
+
 The developer remains responsible for implementation.
 
 ---
 
-# 2. Technology Stack
+## 9. AI Assistance and Recovery
 
-## Frontend
-- HTML5 — Website structure
-- CSS3 — Styling and responsive design
-- JavaScript — Interactivity and progress tracking
+This project uses an AI assistant as a programming
+mentor, not as a replacement for learning.
 
-## Backend
-- Python — Backend programming language
-- Flask — Web application framework
-- SQLite — Planned persistent database
+To prevent context loss, inconsistent instructions,
+or accidental roadmap changes, the project maintains
+a dedicated recovery document.
 
-## Artificial Intelligence
-- Ollama — Planned local model runtime
-- Local LLM — Model to be chosen after hardware testing
-- RAG — Planned retrieval-based knowledge system
+**[AI Context and Recovery Prompt](docs/AI_CONTEXT.md)**
 
-## Development Tools
-- Visual Studio Code
-- Git
-- GitHub
-- VS Code Live Server
+When starting a new conversation, the AI assistant
+should read the relevant project documentation,
+inspect the current repository, and verify the
+latest checkpoint before recommending code changes.
 
----
+The assistant must always remember:
 
-# 3. Development Roadmap
-
-This section tracks building the Mini Memory website.
-
-Legend:
-- [x] Completed
-- [ ] Not completed / awaiting verification
-
-## Stage 1 — Git, HTML, CSS and Navigation
-
-### Module 1: Version Control
-- [x] Lesson 1.1 — Git and GitHub Fundamentals
-- [x] Task — Create GitHub repository
-- [x] Task — Create README.md
-- [x] Task — Understand commits
-
-### Module 2: HTML Foundations
-- [x] Lesson 1.2 — Website Structure
-- [x] Task — Create index.html
-- [x] Task — Learn semantic HTML
-- [x] Task — Build first homepage
-
-### Module 3: CSS Foundations
-- [x] Lesson 1.3 — CSS Fundamentals
-- [x] Task — Create static/css/style.css
-- [x] Task — Connect CSS to HTML
-- [x] Task — Customize colors
-
-### Module 4: Dashboard Layout
-- [x] Lesson 1.4 — CSS Grid and Dashboard Cards
-- [x] Task — Create responsive dashboard cards
-- [x] Task — Add progress bar styling
-- [x] Task — Improve mobile layout
-
-### Module 5: Navigation
-- [x] Lesson 1.5 — Buttons, Links, and Navigation
-- [x] Task — Create navigation bar
-- [x] Task — Create roadmap.html
-- [x] Task — Connect dashboard to roadmap
-
-## Stage 2 — JavaScript and Progress Tracking
-
-### Module 1: JavaScript Foundations
-- [x] Lesson 2.1 — JavaScript Fundamentals
-- [x] Task — Create progress.js
-- [x] Task — Build first completion control
-
-### Module 2: Dynamic Progress
-- [x] Lesson 2.2 — Dynamic Progress Tracking
-- [x] Task — Create multiple checkboxes
-- [x] Task — Calculate percentages
-- [x] Task — Save progress using localStorage
-
-### Module 3: Structured Roadmap
-- [x] Lesson 2.3 — JavaScript Objects and Arrays
-- [x] Task — Create roadmap-data.js
-- [x] Task — Define 12 AI learning phases
-- [x] Task — Generate roadmap cards dynamically
-
-### Module 4: Interactive Roadmap
-- [x] Lesson 2.4 — Expandable Roadmap Cards
-- [x] Task — Use details and summary elements
-- [x] Task — Separate roadmap and progress scripts
-- [x] Task — Open Phase 4 automatically
-
-### Module 5: Lesson Data Modeling
-- [x] Lesson 2.5 — Phase, Module, Lesson Hierarchy
-- [x] Task — Create lesson-data.js
-- [x] Task — Create lessons.js
-- [x] Task — Render nested lesson structure
-
-### Module 6: Lesson Completion
-- [x] Lesson 2.6 — Dynamic Lesson and Module Progress
-- [x] Task — Generate checkboxes from lesson data
-- [x] Task — Save individual completion states
-- [x] Task — Show Module Completed! at 100%
-
-### Module 7: Unified Dashboard
-- [x] Lesson 2.7 — Unified Progress Dashboard
-- [x] Task — Create dashboard.js
-- [x] Task — Calculate tracked activity progress
-- [x] Task — Display saved progress on homepage
-
-## Stage 3 — Python Backend and Flask
-
-### Module 1: Backend Foundations
-- [x] Lesson 3.1 — Introduction to Backend Development
-- [x] Task — Create app.py
-- [x] Task — Implement homepage and roadmap routes
-- [x] Task — Implement /health endpoint
-- [x] Verify Flask runs locally
-- [x] Verify requirements.txt is committed
-- [x] Verify .gitignore is committed
-
-### Module 2: Flask Templates
-- [x] Lesson 3.2 — Flask Templates and Routing
-- [x] Task — Create templates directory
-- [x] Task — Convert HTML pages into Flask templates
-- [x] Task — Introduce reusable page components
-
-### Module 3: Database Fundamentals
-- [ ] Lesson 3.3 — Introduction to SQLite
-- [ ] Task — Design database schema
-- [ ] Task — Create local database
-- [ ] Task — Understand database queries
-
-### Module 4: Backend Progress Storage
-- [ ] Lesson 3.4 — Flask API Fundamentals
-- [ ] Task — Create progress API endpoints
-- [ ] Task — Save completion data to SQLite
-- [ ] Task — Retrieve saved progress
-
-### Module 5: Browser and Server Integration
-- [ ] Lesson 3.5 — JavaScript Fetch API
-- [ ] Task — Connect frontend to Flask backend
-- [ ] Task — Replace localStorage as primary storage
-- [ ] Task — Plan migration of existing progress
-
-### Module 6: Phone Access
-- [ ] Lesson 3.6 — Local Network Access
-- [ ] Task — Understand LAN and IP addresses
-- [ ] Task — Configure safe local server access
-- [ ] Task — Test website on phone
-- [ ] Task — Introduce authentication and access control
+> Mini Memory exists so I can learn software
+> engineering and build my own locally hosted
+> AI that polishes and refines webnovels.
 
 ---
 
-# 4. Local AI Learning Roadmap
+## 10. Next Development Session
 
-This is separate from the website development roadmap.
+**Current Checkpoint:** Stage 3, Lesson 3.4
 
-The 12 AI phases must preserve their established order.
+**Status:** Flask GET/PUT progress API implemented;
+local execution tests require verification.
 
-## Phase 1 — Project Foundations
-- Module 1: LLM Basics and Terminology
-- Module 2: Local AI Architecture
-- Module 3: Defining Project Goals
-- Module 4: Success Criteria and Limitations
+### Next Steps
 
-## Phase 2 — Hardware Assessment
-- Module 1: CPU, RAM, GPU and VRAM
-- Module 2: Model Sizes and Quantization
-- Module 3: Memory and Disk Requirements
-- Module 4: Performance Planning
+1. Verify GET and PUT API functionality.
+2. Confirm HTTP 400 and 404 error handling.
+3. Verify SQLite progress persists after restarting Flask.
+4. Begin Lesson 3.5 — JavaScript Fetch API.
+5. Connect the learning interface to the backend.
 
-## Phase 3 — Local AI Environment
-- Module 1: Ollama or LM Studio
-- Module 2: Installation and Configuration
-- Module 3: Downloading Models
-- Module 4: First Inference and Troubleshooting
+The latest session notes and continuation instructions
+will be maintained in:
 
-## Phase 4 — Model Selection and Benchmarking
-- Model Families and Licenses
-- Parameters and Context Windows
-- Speed, Memory and Quality Testing
-- Choosing a Default Model
-
-## Phase 5 — Prompt Engineering for Webnovels
-- System Prompts and Instructions
-- Style Preservation
-- Terminology and Character Rules
-- Reducing Omissions and Inventions
-
-## Phase 6 — Long-Chapter Processing
-- Tokens and Context Budgets
-- Intelligent Text Chunking
-- Overlap and Continuity
-- Chapter-Level Verification
-
-## Phase 7 — Python and Local AI APIs
-- Python Foundations
-- Files, Strings and JSON
-- HTTP and Ollama APIs
-- Errors, Retries and Logging
-
-## Phase 8 — Webnovel Polishing Application
-- Application Interface Design
-- File Upload and Export
-- Side-by-Side Text Comparison
-- Revision History and Batch Processing
-
-## Phase 9 — Knowledge and Memory (RAG)
-- Embeddings and Vector Search
-- Character and Location Glossaries
-- Worldbuilding Knowledge Base
-- Retrieval Augmented Generation
-
-## Phase 10 — Customization and Fine-Tuning
-- Prompting vs. RAG vs. Fine-Tuning
-- Preparing Training Examples
-- LoRA and QLoRA Fundamentals
-- Evaluation and Overfitting
-
-## Phase 11 — General-Purpose AI Assistant
-- Multiple Task Profiles
-- Document Q&A and Code Assistance
-- Controlled Local Tools
-- Permissions and Safety
-
-## Phase 12 — Optimization and Final Deployment
-- Performance and Concurrency
-- Storage and Backup
-- Privacy and Network Security
-- Testing and Maintenance
-
-All detailed lessons, labs, and checkpoints will be
-expanded progressively as the project develops.
+**[Session Log](docs/SESSION_LOG.md)**
 
 ---
 
-# 5. Project Architecture
+## 11. Project Vision
 
-Current and planned file structure:
+Mini Memory will progress through three major milestones.
 
-mini-memory/
-|
-|-- app.py
-|-- index.html
-|-- roadmap.html
-|-- README.md
-|-- requirements.txt           [Verify]
-|-- .gitignore                 [Verify]
-|
-|-- static/
-|   |-- css/
-|   |   |-- style.css
-|   |
-|   |-- js/
-|       |-- progress.js
-|       |-- roadmap-data.js
-|       |-- roadmap.js
-|       |-- lesson-data.js
-|       |-- lessons.js
-|       |-- dashboard.js
-|
-|-- templates/                 [Planned]
-|-- instance/                  [Planned database location]
+### Milestone 1 — Learning the Foundations
 
-## File Responsibilities
+Build and understand the website, JavaScript
+interactions, Python backend, APIs, and database.
 
-- app.py: Flask backend and HTTP routes
-- index.html: Main dashboard
-- roadmap.html: Learning roadmap interface
-- style.css: Website styling
-- progress.js: Original Phase 1 progress tracking
-- roadmap-data.js: Canonical AI phases and modules
-- roadmap.js: Expandable roadmap generation
-- lesson-data.js: Nested Phase/Module/Lesson structure
-- lessons.js: Lesson checkboxes and module calculations
-- dashboard.js: Homepage progress statistics
+### Milestone 2 — Local Webnovel Polishing AI
+
+Install and evaluate local language models,
+develop reliable webnovel polishing prompts,
+handle long chapters, and build the editing interface.
+
+### Milestone 3 — Optimization and Expansion
+
+Improve performance, introduce continuity memory,
+enable authorized phone access, and optionally expand
+into a general-purpose AI assistant.
 
 ---
 
-# 6. Local Development
+## Final Principle
 
-## Open the Project
+**The objective is not simply to finish an application.**
 
-Project location on the original home PC:
+The objective is to become capable of understanding,
+building, debugging, maintaining, and improving
+my own software and local AI system.
 
-E:\Code Projects\mini-memory
-
-## Activate Python Environment
-
-PowerShell:
-
-    .\.venv\Scripts\Activate.ps1
-
-## Install Dependencies
-
-    python -m pip install -r requirements.txt
-
-If requirements.txt is unavailable, first install Flask:
-
-    python -m pip install Flask
-
-Then generate requirements.txt in the active environment:
-
-    python -m pip freeze > requirements.txt
-
-## Run Mini Memory
-
-    python app.py
-
-Open:
-
-    http://127.0.0.1:5000
-
-Health endpoint:
-
-    http://127.0.0.1:5000/health
-
-The Flask development server is for local development
-only. It must not be publicly exposed.
-
-## Git Workflow
-
-    git status
-    git add <specific-files>
-    git commit -m "feat: describe the change"
-    git push origin main
-
-Before starting work on another machine:
-
-    git pull origin main
-
-Never commit passwords, credentials, private databases,
-virtual environments, or private webnovel drafts.
-
----
-
-# 7. Progress and Data Storage
-
-## Current
-
-Learning progress is stored using browser localStorage.
-
-There are currently two separate tracking systems:
-
-1. Original Phase 1 module-topic checkboxes.
-2. Individual lesson/lab/checkpoint activity checkboxes.
-
-The homepage calculates progress from the second system.
-
-These systems have not yet been merged.
-
-## Planned
-
-SQLite will become the primary source of progress data.
-
-The Flask backend will expose controlled API endpoints
-that allow the website to read and update progress.
-
-Before migration, existing localStorage data should
-be backed up and migrated carefully.
-
-A Git commit does not back up browser localStorage.
-
-Phone and PC synchronization will require both devices
-to communicate with the same running server.
-
----
-
-# 8. Development Rules
-
-1. Teach concepts before implementing them.
-2. Provide code with explanations.
-3. Keep changes small and testable.
-4. Specify exact files to create or modify.
-5. Review the repository before changing existing code.
-6. Never assume unverified work is complete.
-7. Avoid duplicating functionality between files.
-8. Preserve stable lesson identifiers.
-9. Do not silently change the original 12-phase roadmap.
-10. Never delete saved progress without a migration plan.
-11. Test locally before committing.
-12. Review Git changes before pushing.
-
-A lesson is complete only when its implementation is
-tested and the developer understands the main concepts.
-
----
-
-# 9. Known Limitations and Future Improvements
-
-- The AI model is not yet integrated.
-- SQLite is not yet implemented.
-- Browser progress is not synchronized across devices.
-- The complete lesson curriculum is not yet modeled.
-- Overall 12-phase completion isn't fully calculated.
-- Phone access is not yet configured.
-- Login and access controls are not yet implemented.
-- The current Flask setup is development-only.
-
----
-
-# 10. AI Recovery and Continuation Prompt
-
-Copy the prompt below into ChatGPT if the assistant loses
-context, invents project details, changes lesson order,
-or provides code inconsistent with the repository.
-
-## BEGIN RECOVERY PROMPT
-
-You are my senior software engineering mentor,
-technical instructor, code reviewer, and project architect.
-
-We are developing my project called Mini Memory,
-previously called Localised AI Model for General Use.
-
-My GitHub repository is:
-https://github.com/earl2k22/mini-memory
-
-The repository README.md is our source of truth for
-the project goals, roadmap, development rules,
-architecture, and documented progress.
-
-IMPORTANT INSTRUCTIONS:
-
-1. Inspect the actual repository files before suggesting
-   modifications to existing code.
-
-2. Never invent file contents, completed lessons,
-   Git commits, software installations, or test results.
-
-3. Separate verified implementation, my reported
-   completion, and planned work.
-
-4. Teach me step by step. I am learning programming,
-   and I want to understand and implement the code myself.
-
-5. Explain new concepts, functions, syntax, and the reason
-   behind every major code change.
-
-6. Give exact filenames and clear instructions about
-   what to add, remove, or replace.
-
-7. Avoid providing unnecessarily large blocks of code
-   when smaller, understandable changes are sufficient.
-
-8. Do not silently restructure the established roadmap.
-
-9. Maintain the distinction between our two tracks:
-   Website Development and Local AI Learning.
-
-10. Preserve existing functionality, saved progress,
-    and stable IDs whenever possible.
-
-11. Do not automatically modify my GitHub repository.
-    I want to implement, test, commit, and push the code.
-
-12. When debugging, inspect actual errors and existing
-    code before prescribing changes.
-
-13. Never claim code works without testing or evidence.
-
-14. After each lesson, give me practical tests,
-    a mini challenge, and appropriate Git commands.
-
-15. Explain how changes support our long-term goal:
-    self-hosted AI running on my PC and accessible
-    from my phone.
-
-CURRENT PROJECT CONTEXT:
-
-We have completed the initial frontend development
-lessons covering HTML, CSS, JavaScript, Git, GitHub,
-dashboard design, navigation, nested lesson data,
-and browser-local progress tracking.
-
-We have started Stage 3: Python and Flask.
-
-The last reviewed backend file is app.py, which serves
-the homepage, roadmap, and health endpoint.
-
-requirements.txt and .gitignore still need verification
-in the repository.
-
-Our next planned lesson is:
-
-Stage 3, Lesson 3.2 — Flask Templates and Routing.
-
-Before proceeding:
-
-- Read the latest README.md.
-- Inspect relevant current source files.
-- Identify the last verified checkpoint.
-- State what is complete, incomplete, and uncertain.
-- Continue with the next appropriate lesson.
-- Ask for missing local-only information only when
-  it is essential to proceed safely.
-
-Do not restart the entire project or invent a new
-curriculum.
-
-## END RECOVERY PROMPT
-
----
-
-# 11. Project Vision
-
-Mini Memory will evolve through three major milestones:
-
-### Milestone 1 — Personal Learning Platform
-
-A responsive website that stores structured lessons,
-activities, progress, and developer notes.
-
-### Milestone 2 — Self-Hosted AI Server
-
-A Python-based application running a local AI model,
-accessible from the home PC and other authorized
-devices on the local network.
-
-### Milestone 3 — General-Purpose AI Workspace
-
-A personal AI interface for webnovel polishing,
-document analysis, technical support, and other tasks.
-
-The goal is not only to complete the software.
-
-The goal is to become capable of understanding,
-maintaining, troubleshooting, and extending it.
+Mini Memory is my journey from learning to code
+to building an AI application that I can genuinely
+call my own.

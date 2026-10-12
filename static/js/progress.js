@@ -1,8 +1,16 @@
 
+/*
+ * MINI MEMORY
+ * File: static/js/progress.js
+ * Purpose: Track and save Phase 1 learning progress
+ */
+
+// Find all lesson checkboxes.
 const checkboxes = document.querySelectorAll(
     ".lesson-checkbox"
 );
 
+// Find the progress text and progress bar.
 const progressText = document.getElementById(
     "phase1-progress"
 );
@@ -11,7 +19,7 @@ const progressFill = document.getElementById(
     "phase1-fill"
 );
 
-// Update the displayed completion percentage.
+// Calculate and display progress.
 function updateProgress() {
     let completed = 0;
 
@@ -27,26 +35,33 @@ function updateProgress() {
         ? Math.round((completed / total) * 100)
         : 0;
 
-    progressText.textContent =
-        `${completed} of ${total} items completed (${percentage}%)`;
+    if (progressText) {
+        progressText.textContent =
+            `${completed} of ${total} items completed (${percentage}%)`;
+    }
 
-    progressFill.style.width = `${percentage}%`;
+    if (progressFill) {
+        progressFill.style.width = `${percentage}%`;
+    }
 }
 
-// Restore saved checkbox values.
+// Restore previous checkbox states.
 checkboxes.forEach(function (checkbox) {
     const key = "miniMemory." + checkbox.dataset.lesson;
 
-    checkbox.checked = localStorage.getItem(key) === "true";
+    checkbox.checked =
+        localStorage.getItem(key) === "true";
 
+    // Save changes whenever a checkbox is clicked.
     checkbox.addEventListener("change", function () {
-        localStorage.setItem(key, String(checkbox.checked));
+        localStorage.setItem(
+            key,
+            String(checkbox.checked)
+        );
 
         updateProgress();
     });
 });
 
-// Display progress when the page first loads.
-if (progressText && progressFill) {
-    updateProgress();
-}
+// Set the initial progress display.
+updateProgress();

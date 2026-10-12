@@ -1,90 +1,67 @@
 
-const checkboxes = document.querySelectorAll(
-    ".lesson-checkbox"
-);
-
-const progressText = document.getElementById(
-    "phase1-progress"
-);
-
-const progressFill = document.getElementById(
-    "phase1-fill"
-);
-
-// Update the displayed completion percentage.
-function updateProgress() {
-    let completed = 0;
-
-    checkboxes.forEach(function (checkbox) {
-        if (checkbox.checked) {
-            completed++;
-        }
-    });
-
-    const total = checkboxes.length;
-
-    const percentage = total > 0
-        ? Math.round((completed / total) * 100)
-        : 0;
-
-    progressText.textContent =
-        `${completed} of ${total} items completed (${percentage}%)`;
-
-    progressFill.style.width = `${percentage}%`;
-}
-
-// Restore saved checkbox values.
-checkboxes.forEach(function (checkbox) {
-    const key = "miniMemory." + checkbox.dataset.lesson;
-
-    checkbox.checked = localStorage.getItem(key) === "true";
-
-    checkbox.addEventListener("change", function () {
-        localStorage.setItem(key, String(checkbox.checked));
-
-        updateProgress();
-    });
-});
-
-// Display progress when the page first loads.
-if (progressText && progressFill) {
-    updateProgress();
-}
-
+/*
+ * MINI MEMORY
+ * File: static/js/roadmap.js
+ * Purpose: Generate expandable roadmap phase cards
+ */
 
 const roadmapContainer = document.getElementById(
     "roadmap-container"
 );
 
 function displayRoadmap() {
+
+    // Stop if this page has no roadmap container.
     if (!roadmapContainer) {
         return;
     }
 
-    const upcomingPhases = roadmapData.filter(function (phase) {
-        return phase.id >= 4;
-    });
+    // Clear existing cards before rebuilding.
+    roadmapContainer.replaceChildren();
 
+    // Phases 1-3 are already written in roadmap.html.
+    const upcomingPhases = roadmapData.filter(
+        function (phase) {
+            return phase.id >= 4;
+        }
+    );
+
+    // Generate an expandable card for each phase.
     upcomingPhases.forEach(function (phase) {
-        const card = document.createElement("article");
+
+        // Create the expandable container.
+        const card = document.createElement("details");
         card.className = "phase-card";
 
-        const heading = document.createElement("h3");
-        heading.textContent =
+        // Create the clickable heading.
+        const summary = document.createElement("summary");
+        summary.textContent =
             `Phase ${phase.id}: ${phase.title}`;
 
+        // Open Phase 4 by default.
+        if (phase.id === 4) {
+            card.open = true;
+        }
+
+        // Create the module list.
         const list = document.createElement("ul");
 
         phase.modules.forEach(function (moduleName) {
             const item = document.createElement("li");
+
             item.textContent = moduleName;
+
             list.appendChild(item);
         });
 
-        card.appendChild(heading);
+        // Assemble the card.
+        card.appendChild(summary);
         card.appendChild(list);
+
+        // Display it on the page.
         roadmapContainer.appendChild(card);
     });
 }
 
+// Generate the roadmap when the script runs.
 displayRoadmap();

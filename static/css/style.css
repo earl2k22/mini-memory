@@ -333,3 +333,29 @@ footer {
     color: #cbd5e1;
     margin-bottom: 10px;
 }
+
+
+/* 21. Dynamic Lesson Progress */
+
+.module-card .progress-bar {
+    margin-bottom: 20px;
+}
+
+.module-card .lesson-list {
+    margin-top: 15px;
+}
+
+.module-card .lesson-list label:has(input:checked) {
+    border: 1px solid #22c55e;
+    background-color: #163b32;
+}
+
+.module-card .lesson-list input:checked + span {
+    color: #86efac;
+    text-decoration: line-through;
+}
+
+.module-card .lesson-checkbox {
+    flex-shrink: 0;
+}
+

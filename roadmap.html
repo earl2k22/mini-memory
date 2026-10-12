@@ -52,33 +52,49 @@
         </section>
 
         <section>
-            <h2>Phase 1: Project Foundations</h2>
-            <p>
-                Learn what local AI is and understand
-                how language models work.
-            </p>
-
-            <h3>Modules</h3>
-            <ul>
-                <li>LLM Basics and Terminology</li>
-                <li>Local AI Architecture</li>
-                <li>Project Goals</li>
-                <li>Success Criteria and Limitations</li>
-            </ul>
-            <!-- Interactive Lesson Progress -->
+           <!-- Phase 1 Learning Progress -->
             <div class="lesson-progress">
 
-                <h3>Lesson Progress</h3>
+                <h3>Phase 1 Learning Progress</h3>
 
-                <p id="lesson-status">
-                    Status: Not Completed
-                </p>
+                <p id="phase1-progress">0 of 4 items completed</p>
 
-                <button id="complete-lesson" type="button">
-                    Mark Lesson as Complete
-                </button>
+                <div class="progress-bar">
+                    <div id="phase1-fill" class="progress-fill"></div>
+                </div>
 
-            </div>
+                <div class="lesson-list">
+
+                    <label>
+                        <input type="checkbox"
+                            class="lesson-checkbox"
+                            data-lesson="phase1-module1">
+                        LLM Basics and Terminology
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                            class="lesson-checkbox"
+                            data-lesson="phase1-module2">
+                        Local AI Architecture
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                            class="lesson-checkbox"
+                            data-lesson="phase1-module3">
+                        Project Goals
+                    </label>
+
+                    <label>
+                        <input type="checkbox"
+                            class="lesson-checkbox"
+                            data-lesson="phase1-module4">
+                        Success Criteria and Limitations
+                    </label>
+
+                </div>
+            </div
         </section>
 
         <section>
@@ -127,6 +143,6 @@
     <footer>
         <p>Mini Memory | Localised AI Model</p>
     </footer>
-
+<script src="static/js/progress.js" defer></script>
 </body>
 </html>

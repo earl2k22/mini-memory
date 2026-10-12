@@ -1,29 +1,52 @@
 
-const button = document.getElementById("complete-lesson");
-const statusText = document.getElementById("lesson-status");
+const checkboxes = document.querySelectorAll(
+    ".lesson-checkbox"
+);
 
-const storageKey = "miniMemory.phase1.lesson1.completed";
+const progressText = document.getElementById(
+    "phase1-progress"
+);
 
-let isCompleted = localStorage.getItem(storageKey) === "true";
+const progressFill = document.getElementById(
+    "phase1-fill"
+);
 
-function updateDisplay() {
-    if (isCompleted) {
-        statusText.textContent = "Status: Completed";
-        button.textContent = "Mark as Incomplete";
-    } else {
-        statusText.textContent = "Status: Not Completed";
-        button.textContent = "Mark Lesson as Complete";
-    }
+// Update the displayed completion percentage.
+function updateProgress() {
+    let completed = 0;
+
+    checkboxes.forEach(function (checkbox) {
+        if (checkbox.checked) {
+            completed++;
+        }
+    });
+
+    const total = checkboxes.length;
+
+    const percentage = total > 0
+        ? Math.round((completed / total) * 100)
+        : 0;
+
+    progressText.textContent =
+        `${completed} of ${total} items completed (${percentage}%)`;
+
+    progressFill.style.width = `${percentage}%`;
 }
 
-if (button && statusText) {
-    updateDisplay();
+// Restore saved checkbox values.
+checkboxes.forEach(function (checkbox) {
+    const key = "miniMemory." + checkbox.dataset.lesson;
 
-    button.addEventListener("click", function () {
-        isCompleted = !isCompleted;
+    checkbox.checked = localStorage.getItem(key) === "true";
 
-        localStorage.setItem(storageKey, String(isCompleted));
+    checkbox.addEventListener("change", function () {
+        localStorage.setItem(key, String(checkbox.checked));
 
-        updateDisplay();
+        updateProgress();
     });
+});
+
+// Display progress when the page first loads.
+if (progressText && progressFill) {
+    updateProgress();
 }

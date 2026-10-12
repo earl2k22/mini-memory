@@ -132,3 +132,49 @@ footer {
         padding: 18px;
     }
 }
+
+/* 13. Main Navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: #1e293b;
+    border-top: 1px solid #334155;
+}
+
+.nav-link {
+    color: #cbd5e1;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+    background-color: #334155;
+    color: #ffffff;
+}
+
+.nav-link.active {
+    background-color: #0284c7;
+    color: #ffffff;
+}
+
+.nav-link:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 3px;
+}
+
+/* 14. Mobile Navigation */
+@media (max-width: 600px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .nav-link {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+}

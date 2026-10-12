@@ -195,3 +195,32 @@ footer {
     outline: 2px solid #38bdf8;
     outline-offset: 4px;
 }
+
+/* 16. Interactive Lesson Progress */
+.lesson-progress {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #0f172a;
+    border: 1px solid #334155;
+}
+
+.lesson-progress button {
+    background-color: #0284c7;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 18px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.lesson-progress button:hover {
+    background-color: #0369a1;
+}
+
+.lesson-progress button:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 3px;
+}
+
